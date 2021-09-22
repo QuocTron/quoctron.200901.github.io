@@ -1,0 +1,468 @@
+/*--------------------------------------*/
+/*------------------DEFAUL SETUP---------*/
+/*--------------------------------------*/
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family:'lato', sans-serif;
+    font-size: 20px;
+    color:#5a5a5a;
+    background-color: #ffff;
+    text-rendering: optimizeLegibility;
+}
+body{
+    overflow-x:hidden;
+}
+/*--------------------------------------*/
+/*----------------REUSABLE COMPONENT-----*/ 
+/*--------------------------------------*/
+.row{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    display: inline-block;/*khắc phục canh chỉnh width , hight vì inline không canh chỉnh được*/
+    width: 190px;
+    text-align: center;
+    transition: all 1s;
+    margin-top: 25px;
+}
+.btn:hover,
+.btn:active{
+    background-color: chocolate;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 250%;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    color: white;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    color :orange;
+    font-size:170%;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2::after{
+    content:"";
+    display: block;
+    width: 190px;
+    height: 3px;
+    background-color: rgba(230,126,34,0.5);
+    margin: 10px auto;
+}
+/* ----------------------------------------------------------- */
+/* --------------------------HEADER--------------------------- */
+/* ----------------------------------------------------------- */
+header{
+    background-image:linear-gradient(to right top , rgba(2,33,64,0.8),rgba(29, 189, 183, 0.85)), url(../img/backgroundk.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.logo{
+    width:350px;
+    float: left;
+    margin-left: 70px;
+} 
+.main-row{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.main-row li a{
+    text-decoration: none;
+    font-weight:700;
+    color:white;
+    font-size: 110%;
+    transition: all 0.5s;
+    padding: 5px 0;
+}
+.main-row li a:hover,
+.main-row li a:active{
+    border-bottom: 3px solid white;
+    color:gold
+} 
+.main-row li {
+    display: inline;
+    margin-right: 30px;
+   
+}
+.heading-main-box{
+    position:absolute;
+    top :50%;
+    right:50%;
+    transform: translate(60%,-40%);
+    width: 1140px;
+}
+/*--------------sticky-------------*/
+.sticky{
+    background-color: rgba(130, 170, 243, 0.9);
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+}
+.sticky .logo{
+    width: 180px;
+}
+.sticky .main-row{
+    margin-top: 20px;
+}
+.mobile-nav-icon{
+    font-size: 200%;
+    color: #adaeb9;
+    position: absolute;
+    top: 45px;
+    right: 70px;
+    display: none;
+}
+.sticky .mobile-nav-icon{
+    top: 10px;
+}
+/*--------------sticky-------------*/
+.menu{
+    display: inline-block;
+    background-color: rgb(244, 252, 252);
+    width: 220px;
+    height: 200px;
+    margin-top:-40px;
+    position: fixed;
+    right: 100px;
+    border: 2px solid #010c0c;
+}
+.menu li{
+    display: block;
+    margin: 20px 10px;
+    font-size: 20px;
+    color: #265077;
+    position: relative;
+}
+/* ----------------------------------- */
+/* -------------ABOUT SECTION ---------- */
+/* --------------------------------------- */
+.p-long{
+    color : #265077;
+    font-size: 22px;
+    text-align: center;
+    margin: 40px 0;
+    width: 70%;
+    margin-left: 15%;
+    word-spacing: 1px;
+}
+.aboutpicture img{
+    border-radius: 20px;
+    width: 220px;
+    height: 140px;
+    border: 4px solid  #dcdddd;
+    padding: 0 0.5px;
+    box-shadow: 0px 3px 5px 0px  #4d95e7;
+    transition: all 0.5s;
+}
+.aboutpicture:hover img,
+.aboutpicture:active img{
+    filter:brightness(60%) blur(0.2px);
+}
+.aboutpicture{
+    position: relative;
+}
+.picture-title{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    color: #1036dd;
+    transform: translate(-70%,200%);
+    font-size: 16px;
+    transition:all .7s;
+    opacity: 0;
+}
+.aboutpicture:hover .picture-title,
+.aboutpicture:active .picture-title{
+    transform: translate(-70%,-50%);
+    opacity: 1;
+}
+.about-section{
+    margin-bottom: 120px;
+
+}
+.about-section .row{
+    margin-top: 30px;
+    width: 75%;
+}
+/*-------------------------------------------*/
+/*-------------Section Product---------------*
+/*------------------------------------------*/
+
+.product-box{
+    background-color:#f5f5ff;
+    width: 90%;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px #7880f3;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left:20px ;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.small-icon{
+    margin-right: 7px;
+    color: rgb(22, 71, 219)
+}
+.product li {
+    list-style: none;
+    font-size: 22px;
+}
+h3{
+    background-color:rgb(9, 67, 126);;
+    padding: 15px 30px;/*thay đổi khoảng cách từ content đến element*/
+    text-align:center;
+    text-transform: uppercase;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 100%;
+}
+.product-price{
+    color: #07507e;
+    font-size: 250%;
+    font-weight: 30;
+    text-align: center;
+}
+.product-price span{
+    font-size: 80%;
+    font-weight: 100;
+}
+.product-box ul li{
+   
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.product-box .btn{
+    margin-left: 20%;
+}
+blockquote cite img{
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #0861bb;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.product-section{
+    background-color: #fafafd;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+.product-section .span-1-of-3 {
+    margin-right: -1px;
+}
+/*-----------------------------------------*/
+/*-------------Section testtimorials--------*/
+/*------------------------------------------*/
+.testtimorials-section h2{
+   padding-top: 60px;
+}
+blockquote{
+    line-height: 150%;
+    font-style: italic;
+    color: #0b2033;
+    font-weight: 300;
+    width: 380px;
+    position: relative;/*đi chung với  position: absolute*/
+    width: 90%;
+}
+blockquote::before{
+    content: '\201C';
+    display: block ;
+    font-size: 400%;
+    position: absolute;/*đi chung với  position: relative*/
+    top:-10px;
+    left: -5px;
+}
+cite{
+    display: block;
+    margin-top: 20px;
+}
+.testtimorials-section{
+    background-position: center;
+    padding-bottom: 100px;
+    background-image:linear-gradient(to right top , rgba(177, 205, 236, 0.8),rgba(80, 206, 206, 0.85)),url(../img/background2.png) ;
+}
+.testtimorials-section .row{
+    margin-left: 100px;
+}
+/*----------------------------------------------*/
+/*--------------section-sponsor-----------------*/
+/*----------------------------------------------*/
+.sponsors-section{
+    background-color:#ebeef0;
+    padding-bottom: 50px;
+}
+.sponsors-section h2{
+    padding-top: 50px;
+}
+.sponsors-section li{
+    float: left;
+    list-style: none;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sponsors-section h2{
+    margin-bottom: 50px;
+}
+.sponsor-showcase{
+    margin-left: 8%;
+    display: block;
+}
+figcaption{
+    color: rgb(113, 113, 236);
+    font-size: 100%;
+    font-weight: 900;
+}
+.logo-sport{
+    width: 140px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.logo-sport:hover,
+.logo-sport:active{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/*----------------------------------------------*/
+/*--------------contact-section-----------------*/
+/*----------------------------------------------*/
+.contact-section{
+    background-image:linear-gradient(to right top , rgba(5, 57, 116, 0.8),rgba(9, 20, 87, 0.85)), url(../img/background3png.jpg);
+    padding: 1px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-right: 100px;
+}
+.information{
+    list-style: none;
+    color:white;
+    line-height: 150%;
+    word-spacing: 1px;
+    margin-left:50px;
+    padding-left: 10px;
+    width:500px;
+}
+.information li i{
+    margin-right: 10px;
+    color: #0c033d;
+    transition: all 0.2s;
+    
+}
+
+.icon-lienlac{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.information li i:hover ,
+.information li i:active {
+    transform:scale(1.5,1.5);
+}
+.icon-lienlac li{
+    margin: 0 8px;
+    font-size: 200%;
+    color: white;
+    display: inline-block;
+    transition: all .4s;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.icon-lienlac li:hover,
+.icon-lienlac li:active{
+    transform: scale(1.5,1.5);
+    color: rgb(224, 154, 24);
+}
+form{
+   width: 60%;
+   background-color: rgba(0,0,0,0.7);
+   height: 450px;
+   padding: 20px;
+   margin-left: 45%;
+   margin-bottom: 30px;
+}
+label{
+    color: white;
+    font-size: 150%;
+}
+form .row{
+    padding-right: 630px;
+    margin: 20px;
+}
+input[type=submit]{
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 40%;
+}
+input,textarea{
+    outline: none;
+    background-color: rgba(0,0,0,.4);
+    border: 1px solid rgba(110, 110, 110, 0.7);
+    cursor: pointer;
+    border-radius: 5px;
+}
+input{
+    height: 50px;
+}
+textarea{
+    height: 100px;
+    resize: none;
+}
+form .row:last-child{
+    margin-left: 110px;
+}
+input[type=text],input[type=email],textarea{
+    font-size: 100%;
+    width: 50%;  
+}
+input[type=text]:focus,input[type=email]:focus,textarea:focus{
+    color: white;
+    background-color: rgba(70, 68, 68, 0.7);
+}
+/*----------------------------------------------*/
+/*--------------footer--------------------------*/
+/*----------------------------------------------*/
+footer p{
+   text-align: center;
+   background-color: rgb(85, 82, 82);
+   color: white;
+   padding: 20px;
+}
+
+
